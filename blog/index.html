@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — AIO Inc. | AI Operations, Marketing & Build Insights</title>
+<meta name="description" content="Real insights from the people building AI-powered companies. Marketing, operations, SEO, automation, and the honest truth about what works in 2026.">
+<meta name="keywords" content="AI blog, AI company building, marketing automation blog, AI operations, DFW tech blog">
+<link rel="canonical" href="https://aioglobal.com/blog/">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<meta property="og:title" content="Blog — AIO Inc. | AI Operations, Marketing & Build Insights">
+<meta property="og:description" content="Real insights from the people building AI-powered companies. No fluff. No content mill. Just what actually works.">
+<meta property="og:image" content="https://aioglobal.com/aio-logo.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aioglobal.com/blog/">
+<meta property="og:site_name" content="AIO Inc.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog — AIO Inc. | AI Operations, Marketing & Build Insights">
+<meta name="twitter:description" content="Real insights from building AI-powered companies. No fluff.">
+<meta name="twitter:image" content="https://aioglobal.com/aio-logo.jpg">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-AIOPLACEHOLDER"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-AIOPLACEHOLDER');
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "AIO Inc. Blog",
+  "url": "https://aioglobal.com/blog/",
+  "description": "Insights on AI company building, marketing automation, and autonomous operations.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "AIO Inc.",
+    "url": "https://aioglobal.com"
+  }
+}
+</script>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+  :root {
+    --deep: #0D0F17; --deep-2: #111422; --surface: #161929; --surface-2: #1C2035;
+    --cyan: #00E5FF; --cyan-dim: rgba(0, 229, 255, 0.15); --purple: #7B6FE6;
+    --purple-dim: rgba(123, 111, 230, 0.15); --silver: #C8CDD5; --silver-bright: #E8ECF1;
+    --gray: #6B7280; --gray-dim: #2A2D3A;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body { font-family: 'Inter', sans-serif; background: var(--deep); color: var(--silver); line-height: 1.6; }
+  nav { position: fixed; top: 0; width: 100%; z-index: 1000; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; backdrop-filter: blur(20px); background: rgba(13, 15, 23, 0.9); border-bottom: 1px solid rgba(0, 229, 255, 0.08); transition: all 0.3s; }
+  nav.scrolled { padding: 0.6rem 2rem; background: rgba(13, 15, 23, 0.98); }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-logo img { height: 40px; width: auto; border-radius: 8px; }
+  .nav-logo span { font-size: 1.3rem; font-weight: 700; background: linear-gradient(135deg, var(--silver-bright), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 2px; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+  .nav-links a { color: var(--gray); text-decoration: none; font-size: 0.85rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s; position: relative; }
+  .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: var(--cyan); transition: width 0.3s; }
+  .nav-links a:hover { color: var(--cyan); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta { padding: 8px 20px !important; background: transparent !important; border: 1px solid var(--cyan) !important; color: var(--cyan) !important; border-radius: 6px; font-size: 0.8rem !important; letter-spacing: 1.5px; transition: all 0.3s !important; }
+  .nav-cta:hover { background: var(--cyan-dim) !important; }
+  .mobile-toggle { display: none; background: none; border: none; color: var(--silver); font-size: 1.5rem; cursor: pointer; }
+  @media (max-width: 768px) { .mobile-toggle { display: block; } .nav-links { display: none; position: fixed; top: 70px; left: 0; right: 0; background: rgba(13,15,23,0.98); flex-direction: column; padding: 2rem; gap: 1.5rem; border-bottom: 1px solid var(--gray-dim); } .nav-links.open { display: flex; } }
+
+  .page-hero { padding: 160px 2rem 60px; text-align: center; position: relative; }
+  .page-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(0,229,255,0.06) 0%, transparent 70%); pointer-events: none; }
+  .section-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--cyan); margin-bottom: 1rem; font-family: 'JetBrains Mono', monospace; }
+  .page-title { font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 800; color: var(--silver-bright); margin-bottom: 1rem; letter-spacing: -2px; }
+  .page-subtitle { font-size: 1rem; color: var(--gray); max-width: 560px; margin: 0 auto; line-height: 1.8; font-weight: 300; }
+
+  .blog-container { max-width: 1200px; margin: 0 auto; padding: 60px 2rem 100px; }
+  .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 2rem; }
+  @media (max-width: 740px) { .blog-grid { grid-template-columns: 1fr; } }
+
+  .post-card {
+    background: var(--surface);
+    border: 1px solid var(--gray-dim);
+    border-radius: 14px;
+    padding: 2rem;
+    text-decoration: none;
+    display: flex; flex-direction: column;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  }
+  .post-card:hover { border-color: rgba(0,229,255,0.35); transform: translateY(-4px); box-shadow: 0 8px 40px rgba(0,229,255,0.06); }
+  .post-meta { display: flex; gap: 0.75rem; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; }
+  .post-cat { display: inline-block; padding: 3px 10px; border-radius: 100px; font-size: 0.65rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; font-family: 'JetBrains Mono', monospace; }
+  .cat-ops { background: var(--cyan-dim); color: var(--cyan); border: 1px solid rgba(0,229,255,0.3); }
+  .cat-marketing { background: rgba(251,113,133,0.1); color: #FB7185; border: 1px solid rgba(251,113,133,0.3); }
+  .cat-seo { background: rgba(52,211,153,0.1); color: #34D399; border: 1px solid rgba(52,211,153,0.3); }
+  .cat-build { background: var(--purple-dim); color: var(--purple); border: 1px solid rgba(123,111,230,0.3); }
+  .cat-industry { background: rgba(251,191,36,0.1); color: #FBBF24; border: 1px solid rgba(251,191,36,0.3); }
+  .post-date { font-size: 0.75rem; color: var(--gray); font-family: 'JetBrains Mono', monospace; }
+  .post-title { font-size: 1.05rem; font-weight: 700; color: var(--silver-bright); line-height: 1.4; margin-bottom: 0.75rem; }
+  .post-excerpt { font-size: 0.85rem; color: var(--gray); line-height: 1.7; flex: 1; }
+  .post-read { margin-top: 1.5rem; font-size: 0.8rem; font-weight: 600; color: var(--cyan); font-family: 'JetBrains Mono', monospace; }
+
+  footer { padding: 3rem 2rem; border-top: 1px solid var(--gray-dim); text-align: center; }
+  .footer-logo { font-size: 1.2rem; font-weight: 700; letter-spacing: 4px; color: var(--silver-bright); margin-bottom: 0.5rem; }
+  .footer-tagline { font-size: 0.8rem; color: var(--gray); letter-spacing: 2px; margin-bottom: 1.5rem; }
+  .footer-links { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem; }
+  .footer-links a { color: var(--gray); text-decoration: none; font-size: 0.85rem; transition: color 0.3s; }
+  .footer-links a:hover { color: var(--cyan); }
+  .footer-legal { font-size: 0.75rem; color: var(--gray-dim); }
+</style>
+</head>
+<body>
+<nav id="navbar">
+  <a href="/" class="nav-logo">
+    <img src="/aio-logo.jpg" alt="AIO Inc.">
+    <span>AIO INC.</span>
+  </a>
+  <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+  <ul class="nav-links">
+    <li><a href="/ventures.html">Ventures</a></li>
+    <li><a href="/#approach">Approach</a></li>
+    <li><a href="/agents.html">Agents</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/build.html" class="nav-cta">Build With AIO</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="section-label">// DISPATCH</div>
+  <h1 class="page-title">From the Field</h1>
+  <p class="page-subtitle">Unfiltered thinking from people actually building AI-powered companies. Not thought leadership — operational reality.</p>
+</div>
+
+<div class="blog-container">
+  <div class="blog-grid">
+
+    <a href="/blog/how-we-built-firehorse-in-30-days.html" class="post-card">
+      <div class="post-meta">
+        <span class="post-cat cat-build">Build</span>
+        <span class="post-date">Mar 2026</span>
+      </div>
+      <div class="post-title">How We Built a Full AI Marketing Agency in 30 Days</div>
+      <p class="post-excerpt">FireHorse Branding went from idea to paying clients in under a month. Here's exactly how we did it — the tech stack, the agent setup, and the clients we landed.</p>
+      <div class="post-read">Read → </div>
+    </a>
+
+    <a href="/blog/what-an-ai-coo-actually-does.html" class="post-card">
+      <div class="post-meta">
+        <span class="post-cat cat-ops">Operations</span>
+        <span class="post-date">Mar 2026</span>
+      </div>
+      <div class="post-title">What an AI COO Actually Does (And Why You Need One)</div>
+      <p class="post-excerpt">An AI director of operations isn't a chatbot answering questions. It's a system that runs your business. This is what Alfred does every day at AIO.</p>
+      <div class="post-read">Read → </div>
+    </a>
+
+    <a href="/blog/ai-agents-for-small-business.html" class="post-card">
+      <div class="post-meta">
+        <span class="post-cat cat-build">Build</span>
+        <span class="post-date">Mar 2026</span>
+      </div>
+      <div class="post-title">AI Agents for Small Business: The Unfair Advantage</div>
+      <p class="post-excerpt">The roofing company in Benbrook now has the same marketing firepower as a national franchise. AI agents leveled the playing field — and most small business owners don't know it yet.</p>
+      <div class="post-read">Read → </div>
+    </a>
+
+    <a href="/blog/replace-your-marketing-agency.html" class="post-card">
+      <div class="post-meta">
+        <span class="post-cat cat-marketing">Marketing</span>
+        <span class="post-date">Feb 2026</span>
+      </div>
+      <div class="post-title">Why We're Replacing Traditional Marketing Agencies</div>
+      <p class="post-excerpt">Your agency charges $5K/month and produces 12 posts. Phoenix produces 50+ per client and tracks every click. The math isn't close.</p>
+      <div class="post-read">Read → </div>
+    </a>
+
+    <a href="/blog/real-estate-ai-marketing.html" class="post-card">
+      <div class="post-meta">
+        <span class="post-cat cat-industry">Industry</span>
+        <span class="post-date">Feb 2026</span>
+      </div>
+      <div class="post-title">How Real Estate Agents Are Using AI to Dominate Their Market</div>
+      <p class="post-excerpt">Luxury listings. Farm and ranch properties. Neighborhood guides. AI handles all of it — freeing agents to focus on what they're actually good at: relationships and closings.</p>
+      <div class="post-read">Read → </div>
+    </a>
+
+    <a href="/blog/ai-roofing-company-marketing.html" class="post-card">
+      <div class="post-meta">
+        <span class="post-cat cat-industry">Industry</span>
+        <span class="post-date">Feb 2026</span>
+      </div>
+      <div class="post-title">AI-Powered Marketing for Roofing Companies: A Case Study</div>
+      <p class="post-excerpt">Storm season hits DFW and the phones should be ringing. Here's how we built a content and SEO system that makes sure they are — every time.</p>
+      <div class="post-read">Read → </div>
+    </a>
+
+    <a href="/blog/property-tax-protest-ai.html" class="post-card">
+      <div class="post-meta">
+        <span class="post-cat cat-industry">Industry</span>
+        <span class="post-date">Feb 2026</span>
+      </div>
+      <div class="post-title">AI and the Property Tax Protest: How We're Saving Texas Homeowners Thousands</div>
+      <p class="post-excerpt">Texas appraisal districts over-value properties. Most homeowners don't protest because they don't know how. AI changes that equation.</p>
+      <div class="post-read">Read → </div>
+    </a>
+
+    <a href="/blog/autonomous-agents-explained.html" class="post-card">
+      <div class="post-meta">
+        <span class="post-cat cat-ops">Operations</span>
+        <span class="post-date">Jan 2026</span>
+      </div>
+      <div class="post-title">Autonomous Agents Explained: What They Are and Why They Matter</div>
+      <p class="post-excerpt">Not a chatbot. Not an assistant. An autonomous agent is a system that takes goals, makes decisions, and executes — without being told what to do at each step.</p>
+      <div class="post-read">Read → </div>
+    </a>
+
+    <a href="/blog/ai-content-calendar-automation.html" class="post-card">
+      <div class="post-meta">
+        <span class="post-cat cat-marketing">Marketing</span>
+        <span class="post-date">Jan 2026</span>
+      </div>
+      <div class="post-title">How AI Builds and Executes a 30-Day Content Calendar Automatically</div>
+      <p class="post-excerpt">From brief to published posts across five platforms — the exact workflow Phoenix uses to produce a month of content in one session.</p>
+      <div class="post-read">Read → </div>
+    </a>
+
+    <a href="/blog/local-business-seo-ai.html" class="post-card">
+      <div class="post-meta">
+        <span class="post-cat cat-seo">SEO</span>
+        <span class="post-date">Jan 2026</span>
+      </div>
+      <div class="post-title">Local Business SEO in 2026: How AI Changes Everything</div>
+      <p class="post-excerpt">Google's local algorithm rewards consistency, relevance, and signals you can now produce at scale. Here's the full playbook.</p>
+      <div class="post-read">Read → </div>
+    </a>
+
+    <a href="/blog/social-media-ai-automation.html" class="post-card">
+      <div class="post-meta">
+        <span class="post-cat cat-marketing">Marketing</span>
+        <span class="post-date">Jan 2026</span>
+      </div>
+      <div class="post-title">Social Media Automation That Doesn't Sound Like a Robot</div>
+      <p class="post-excerpt">The reason most AI-generated social content fails isn't the AI — it's the prompt. Here's how we get content that sounds human, every time.</p>
+      <div class="post-read">Read → </div>
+    </a>
+
+    <a href="/blog/ai-medical-scribe-revolution.html" class="post-card">
+      <div class="post-meta">
+        <span class="post-cat cat-industry">Industry</span>
+        <span class="post-date">Jan 2026</span>
+      </div>
+      <div class="post-title">The AI Medical Scribe Revolution: Saving Physicians 2 Hours a Day</div>
+      <p class="post-excerpt">Physicians spend more time on documentation than with patients. That's backwards. AI scribes are fixing it — and the adoption curve is steeper than most people realize.</p>
+      <div class="post-read">Read → </div>
+    </a>
+
+    <a href="/blog/recovery-community-ai.html" class="post-card">
+      <div class="post-meta">
+        <span class="post-cat cat-industry">Industry</span>
+        <span class="post-date">Dec 2025</span>
+      </div>
+      <div class="post-title">AI in the Recovery Community: Tools That Actually Help</div>
+      <p class="post-excerpt">We've built tools for AA, NA, and Al-Anon. Here's what we learned about designing AI products for communities that have good reasons to be skeptical of technology.</p>
+      <div class="post-read">Read → </div>
+    </a>
+
+    <a href="/blog/foundation-repair-digital-marketing.html" class="post-card">
+      <div class="post-meta">
+        <span class="post-cat cat-industry">Industry</span>
+        <span class="post-date">Dec 2025</span>
+      </div>
+      <div class="post-title">Digital Marketing for Foundation Repair: A Case Study from DFW</div>
+      <p class="post-excerpt">Foundation repair is high-ticket, high-trust, and highly local. Here's the exact system we built for Integrity Foundation Repair that drives leads across 70+ DFW cities.</p>
+      <div class="post-read">Read → </div>
+    </a>
+
+    <a href="/blog/build-ai-company-checklist.html" class="post-card">
+      <div class="post-meta">
+        <span class="post-cat cat-build">Build</span>
+        <span class="post-date">Dec 2025</span>
+      </div>
+      <div class="post-title">The 10-Step Checklist to Build an AI-Powered Company</div>
+      <p class="post-excerpt">After building 22+ ventures, we have a repeatable framework. This is it — the actual checklist we run through every time we start something new.</p>
+      <div class="post-read">Read → </div>
+    </a>
+
+    <a href="/blog/ai-agents-vs-employees.html" class="post-card">
+      <div class="post-meta">
+        <span class="post-cat cat-ops">Operations</span>
+        <span class="post-date">Dec 2025</span>
+      </div>
+      <div class="post-title">AI Agents vs Employees: What We Learned Running Both</div>
+      <p class="post-excerpt">We've run operations with human teams and with AI agents. The honest comparison is more nuanced than the hype suggests — and more useful.</p>
+      <div class="post-read">Read → </div>
+    </a>
+
+    <a href="/blog/netlify-ai-deployment.html" class="post-card">
+      <div class="post-meta">
+        <span class="post-cat cat-build">Build</span>
+        <span class="post-date">Nov 2025</span>
+      </div>
+      <div class="post-title">How We Deploy AI Products at Scale Using Netlify</div>
+      <p class="post-excerpt">Every AIO product lives on Netlify. Here's the deployment architecture, the automation hooks, and why it's the right infrastructure for AI-operated web properties.</p>
+      <div class="post-read">Read → </div>
+    </a>
+
+    <a href="/blog/dfw-small-business-marketing.html" class="post-card">
+      <div class="post-meta">
+        <span class="post-cat cat-marketing">Marketing</span>
+        <span class="post-date">Nov 2025</span>
+      </div>
+      <div class="post-title">DFW Small Business Marketing in 2026: What's Working Right Now</div>
+      <p class="post-excerpt">We're on the ground in Dallas-Fort Worth running marketing for real businesses. Here's what's generating leads and what's wasting money in the current environment.</p>
+      <div class="post-read">Read → </div>
+    </a>
+
+    <a href="/blog/ai-website-seo-checklist.html" class="post-card">
+      <div class="post-meta">
+        <span class="post-cat cat-seo">SEO</span>
+        <span class="post-date">Nov 2025</span>
+      </div>
+      <div class="post-title">The AI-Era SEO Checklist: 25 Things Every Website Needs in 2026</div>
+      <p class="post-excerpt">The fundamentals haven't changed, but the tools and expectations have. This is the full checklist we run on every site before it goes live.</p>
+      <div class="post-read">Read → </div>
+    </a>
+
+    <a href="/blog/future-of-work-ai-agents.html" class="post-card">
+      <div class="post-meta">
+        <span class="post-cat cat-ops">Operations</span>
+        <span class="post-date">Oct 2025</span>
+      </div>
+      <div class="post-title">The Future of Work: Why AI Agents Are the New Employees</div>
+      <p class="post-excerpt">We're not replacing people with AI. We're building organizations where AI handles the repeatable, the scalable, and the relentless — so humans can focus on what only humans can do.</p>
+      <div class="post-read">Read → </div>
+    </a>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">AIO INC.</div>
+  <div class="footer-tagline">Artificial Intelligence Operations</div>
+  <div class="footer-links">
+    <a href="/ventures.html">Ventures</a>
+    <a href="/agents.html">Agents</a>
+    <a href="/blog/">Blog</a>
+    <a href="/build.html">Build With AIO</a>
+    <a href="mailto:info@aioglobal.com">Contact</a>
+  </div>
+  <div class="footer-legal">© 2026 AIO Inc. All rights reserved. Built by agents, for the future.</div>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+  });
+</script>
+</body>
+</html>

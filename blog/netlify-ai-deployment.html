@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How We Deploy AI Products at Scale Using Netlify — AIO Inc.</title>
+<meta name="description" content="The tech stack decisions behind 22 AIO ventures — why Netlify, how we structure deployments, continuous deployment, form handling, and what we'd do differently.">
+<meta name="keywords" content="Netlify deployment, AI product deployment, Netlify static sites, web deployment pipeline">
+<link rel="canonical" href="https://aioglobal.com/blog/netlify-ai-deployment.html">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<meta property="og:title" content="How We Deploy AI Products at Scale Using Netlify — AIO Inc.">
+<meta property="og:description" content="The tech stack decisions behind 22 AIO ventures — why Netlify, how we structure deployments, continuous deployment, form handling, and what we'd do differently.">
+<meta property="og:image" content="https://aioglobal.com/aio-logo.jpg">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://aioglobal.com/blog/netlify-ai-deployment.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How We Deploy AI Products at Scale Using Netlify">
+<meta name="twitter:description" content="The tech stack decisions behind 22 AIO ventures — why Netlify, how we structure deployments, continuous deployment, form handling, and what we'd do differently.">
+<meta name="twitter:image" content="https://aioglobal.com/aio-logo.jpg">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-AIOPLACEHOLDER"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-AIOPLACEHOLDER');</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"How We Deploy AI Products at Scale Using Netlify","description":"The tech stack decisions behind 22 AIO ventures — why Netlify, how we structure deployments, continuous deployment, form handling, and what we'd do differently.","url":"https://aioglobal.com/blog/netlify-ai-deployment.html","datePublished":"2026-01-15","author":{"@type":"Organization","name":"AIO Inc.","url":"https://aioglobal.com"},"publisher":{"@type":"Organization","name":"AIO Inc.","logo":{"@type":"ImageObject","url":"https://aioglobal.com/aio-logo.jpg"}},"image":"https://aioglobal.com/aio-logo.jpg"}</script>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+:root{--deep:#0D0F17;--surface:#161929;--cyan:#00E5FF;--cyan-dim:rgba(0,229,255,0.15);--purple:#7B6FE6;--purple-dim:rgba(123,111,230,0.15);--silver:#C8CDD5;--silver-bright:#E8ECF1;--gray:#6B7280;--gray-dim:#2A2D3A;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;overflow-x:hidden;}
+body{font-family:'Inter',sans-serif;background:var(--deep);color:var(--silver);line-height:1.6;}
+nav{position:fixed;top:0;width:100%;z-index:1000;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;backdrop-filter:blur(20px);background:rgba(13,15,23,0.9);border-bottom:1px solid rgba(0,229,255,0.08);}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-logo img{height:40px;width:auto;border-radius:8px;}
+.nav-logo span{font-size:1.3rem;font-weight:700;background:linear-gradient(135deg,var(--silver-bright),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px;}
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center;}
+.nav-links a{color:var(--gray);text-decoration:none;font-size:0.85rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;transition:color 0.3s;}
+.nav-links a:hover{color:var(--cyan);}
+.nav-cta{padding:8px 20px!important;background:transparent!important;border:1px solid var(--cyan)!important;color:var(--cyan)!important;border-radius:6px;}
+.mobile-toggle{display:none;background:none;border:none;color:var(--silver);font-size:1.5rem;cursor:pointer;}
+@media(max-width:768px){.mobile-toggle{display:block;}.nav-links{display:none;position:fixed;top:70px;left:0;right:0;background:rgba(13,15,23,0.98);flex-direction:column;padding:2rem;gap:1.5rem;border-bottom:1px solid var(--gray-dim);}.nav-links.open{display:flex;}}
+.post-hero{padding:140px 2rem 60px;position:relative;}
+.post-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(0,229,255,0.06) 0%,transparent 70%);pointer-events:none;}
+.post-hero-inner{max-width:760px;margin:0 auto;}
+.post-back{display:inline-flex;align-items:center;gap:6px;color:var(--gray);text-decoration:none;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;font-family:'JetBrains Mono',monospace;margin-bottom:2rem;transition:color 0.3s;}
+.post-back:hover{color:var(--cyan);}
+.post-cat{display:inline-block;padding:3px 12px;border-radius:100px;font-size:0.65rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:1rem;font-family:'JetBrains Mono',monospace;background:var(--cyan-dim);color:var(--cyan);border:1px solid rgba(0,229,255,0.3);}
+.post-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;color:var(--silver-bright);line-height:1.15;letter-spacing:-1px;margin-bottom:1.5rem;}
+.post-byline{display:flex;gap:1.5rem;align-items:center;padding-bottom:2rem;border-bottom:1px solid var(--gray-dim);flex-wrap:wrap;}
+.author-avatar{width:36px;height:36px;background:var(--cyan-dim);border:1px solid rgba(0,229,255,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;}
+.byline-text{font-size:0.8rem;color:var(--gray);}
+.byline-text strong{color:var(--silver);}
+.post-body{max-width:760px;margin:0 auto;padding:3rem 2rem 5rem;}
+.post-body h2{font-size:1.5rem;font-weight:700;color:var(--silver-bright);margin:2.5rem 0 1rem;letter-spacing:-0.5px;}
+.post-body h3{font-size:1.15rem;font-weight:600;color:var(--cyan);margin:2rem 0 0.75rem;}
+.post-body p{margin-bottom:1.25rem;color:var(--silver);line-height:1.75;}
+.post-body ul,.post-body ol{margin:1rem 0 1.5rem 1.5rem;color:var(--silver);}
+.post-body li{margin-bottom:0.5rem;line-height:1.7;}
+.post-body strong{color:var(--silver-bright);}
+.callout{background:var(--cyan-dim);border:1px solid rgba(0,229,255,0.2);border-left:3px solid var(--cyan);border-radius:8px;padding:1.25rem 1.5rem;margin:2rem 0;}
+.callout p{margin:0;color:var(--silver-bright);}
+.cta-block{background:linear-gradient(135deg,rgba(0,229,255,0.08),rgba(123,111,230,0.08));border:1px solid rgba(0,229,255,0.15);border-radius:12px;padding:2.5rem;text-align:center;margin:3rem 0;}
+.cta-block h3{color:var(--silver-bright);font-size:1.4rem;margin-bottom:0.75rem;}
+.cta-block p{color:var(--gray);margin-bottom:1.5rem;}
+.btn-cyan{display:inline-block;padding:12px 28px;background:transparent;border:1px solid var(--cyan);color:var(--cyan);border-radius:6px;text-decoration:none;font-weight:600;font-size:0.9rem;letter-spacing:0.5px;transition:all 0.3s;}
+.btn-cyan:hover{background:var(--cyan-dim);}
+footer{border-top:1px solid var(--gray-dim);padding:2rem;text-align:center;color:var(--gray);font-size:0.8rem;}
+footer a{color:var(--cyan);text-decoration:none;}
+</style>
+</head>
+<body>
+<nav id="navbar">
+  <a href="/" class="nav-logo"><img src="/aio-logo.jpg" alt="AIO Inc."><span>AIO</span></a>
+  <button class="mobile-toggle" onclick="this.nextElementSibling.classList.toggle('open')">☰</button>
+  <ul class="nav-links">
+    <li><a href="/ventures.html">Ventures</a></li>
+    <li><a href="/agents.html">Agents</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/build.html" class="nav-cta">Build With Us</a></li>
+  </ul>
+</nav>
+
+<section class="post-hero">
+  <div class="post-hero-inner">
+    <a href="/blog/" class="post-back">← Back to Blog</a>
+    <div class="post-cat">Technology</div>
+    <h1 class="post-title">How We Deploy AI Products at Scale Using Netlify</h1>
+    <div class="post-byline">
+      <div class="author-avatar">⚡</div>
+      <div class="byline-text"><strong>AIO Inc.</strong><br>2026-01-15 · 6 min read</div>
+    </div>
+  </div>
+</section>
+
+<article class="post-body">
+<p>Deploying websites is a solved problem. The number of ways to get HTML, CSS, and JavaScript in front of a user is large, and most of them work. The question isn't "can we deploy this" — it's "what deployment approach produces the best outcomes at the scale and speed we're operating at."</p>
+<p>We've landed on Netlify for most of our static deployments. Here's why, and how we actually use it.</p>
+<h2>Why Static First</h2>
+<p>Most of what we build doesn't need a server running 24/7 to generate pages dynamically. Product pages, service sites, marketing pages, city landing pages — these are documents with maybe a form or two. They don't change based on who's looking at them. Serving them as static files from a CDN edge network is faster, cheaper, and more reliable than serving them from a compute instance.</p>
+<p>Fast means Lighthouse scores above 90. Cheap means hosting costs that are effectively zero for most of our sites. Reliable means 99.99% uptime without managing servers, patches, or capacity planning.</p>
+<h2>The Netlify Workflow</h2>
+<p>The actual deployment process for a new site:</p>
+<ol>
+  <li>Build the files locally (HTML, CSS, JS, images)</li>
+  <li>Create the Netlify site via API: <code>POST /api/v1/sites</code> with site name and settings</li>
+  <li>Deploy via CLI: <code>netlify deploy --prod --dir=./site --site=SITE_ID</code></li>
+  <li>Configure custom domain in Netlify DNS settings</li>
+  <li>Point domain registrar to Netlify nameservers</li>
+</ol>
+<p>From zero to live on a custom domain is about 20 minutes for a site we've already built. DNS propagation adds a few hours but the site is accessible on the Netlify subdomain immediately.</p>
+<h2>Forms Without a Backend</h2>
+<p>Netlify's built-in form handling is one of the features that makes it genuinely useful for our use case. A contact form with <code>data-netlify="true"</code> on the form tag and <code>name</code> on the form element gets form submissions routed to the Netlify dashboard with zero backend code. We set up email notifications from there.</p>
+<p>For high-volume or complex form requirements, we route to third-party services. But for a lead capture form on a service page that needs to email someone when a prospect fills it out, Netlify forms are sufficient and require nothing to maintain.</p>
+<h2>What We'd Do Differently</h2>
+<p>A few things we've learned the hard way:</p>
+<p><strong>Sitemap.xml before first deploy, not after.</strong> Every site we've built has a sitemap from day one now. Google starts indexing quickly on Netlify-hosted sites (good CDN, fast TTFB), and you want the sitemap there when it does.</p>
+<p><strong>GA4 placeholder, not live tag, in development.</strong> We use G-PLACEHOLDER in development builds and swap in real IDs before production deploy. Mixing development traffic with production analytics data creates noise.</p>
+<p><strong>robots.txt is not optional.</strong> We've launched sites without one. It's not catastrophic, but it means the first thing a crawler does is get a 404 for robots.txt, which isn't a great first impression.</p>
+<p><strong>Naming conventions matter.</strong> We have 22+ Netlify sites. The ones we named carelessly in the early days are harder to manage. Site names should be predictable: client-name-purpose (mason-roofing-site, gps-property-tax, etc.).</p>
+<h2>When Netlify Isn't the Right Answer</h2>
+<p>Dynamic applications with server-side logic, user authentication, real-time features, or complex backend processing need more than a static host. We use Netlify serverless functions for lightweight backend logic, but for anything substantial we move to a proper application platform. Knowing the limit is as important as knowing the capability.</p>
+<div class="cta-block">
+  <h3>Ready to Build Something Autonomous?</h3>
+  <p>Tell us what you're trying to build. We'll show you how AI agents can run it.</p>
+  <a href="/build.html" class="btn-cyan">Start the Conversation →</a>
+</div>
+</article>
+
+<footer>
+  <p>© 2026 AIO Inc. — <a href="/">aioglobal.com</a> · <a href="mailto:info@aioglobal.com">info@aioglobal.com</a></p>
+</footer>
+<script>
+window.addEventListener('scroll',()=>{document.getElementById('navbar')?.classList.toggle('scrolled',window.scrollY>50);});
+</script>
+</body>
+</html>
