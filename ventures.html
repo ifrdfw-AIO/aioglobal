@@ -3,529 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ventures — AIO Inc. | AI-Powered Company Portfolio</title>
-<meta name="description" content="Every AIO venture runs on autonomous AI agents. See our full portfolio: FireHorse Branding, IFR Digital, GPS Property Tax, KIS Treasury, S&S Ammo, Thor Taxes, Hermes Medical, and Baldur Parole.">
-<meta name="keywords" content="AIO ventures, AI company portfolio, FireHorse Branding, IFR Digital, GPS Property Tax, AI-powered businesses">
+<title>Ventures — AIO Inc.</title>
+<meta name="description" content="AIO Inc. builds and operates AI-powered companies across multiple industries.">
 <link rel="canonical" href="https://aioglobal.com/ventures.html">
-<link rel="sitemap" type="application/xml" href="/sitemap.xml">
-<meta property="og:title" content="Ventures — AIO Inc. | AI-Powered Company Portfolio">
-<meta property="og:description" content="Every AIO venture runs on autonomous AI agents. Not demos — real businesses generating real revenue.">
-<meta property="og:image" content="https://aioglobal.com/aio-logo.jpg">
+<meta property="og:title" content="Ventures — AIO Inc.">
+<meta property="og:description" content="AI-powered companies across multiple industries.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://aioglobal.com/ventures.html">
-<meta property="og:site_name" content="AIO Inc.">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ventures — AIO Inc. | AI-Powered Company Portfolio">
-<meta name="twitter:description" content="Every AIO venture runs on autonomous AI agents. Not demos — real businesses generating real revenue.">
-<meta name="twitter:image" content="https://aioglobal.com/aio-logo.jpg">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-AIOPLACEHOLDER"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-AIOPLACEHOLDER');
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "AIO Inc. Ventures",
-  "description": "Portfolio of AI-powered companies built and operated by AIO Inc.",
-  "url": "https://aioglobal.com/ventures.html",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "AIO Inc.",
-    "url": "https://aioglobal.com"
-  }
-}
-</script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
-  :root {
-    --deep: #0D0F17;
-    --deep-2: #111422;
-    --surface: #161929;
-    --surface-2: #1C2035;
-    --cyan: #00E5FF;
-    --cyan-dim: rgba(0, 229, 255, 0.15);
-    --cyan-glow: rgba(0, 229, 255, 0.4);
-    --purple: #7B6FE6;
-    --purple-dim: rgba(123, 111, 230, 0.15);
-    --silver: #C8CDD5;
-    --silver-bright: #E8ECF1;
-    --gray: #6B7280;
-    --gray-dim: #2A2D3A;
-  }
+  :root { --deep: #0D0F17; --surface: #161929; --cyan: #00E5FF; --cyan-dim: rgba(0,229,255,0.15); --purple: #7B6FE6; --silver: #C8CDD5; --silver-bright: #E8ECF1; --gray: #6B7280; --gray-dim: #2A2D3A; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; overflow-x: hidden; }
   body { font-family: 'Inter', sans-serif; background: var(--deep); color: var(--silver); line-height: 1.6; }
-
-  nav {
-    position: fixed; top: 0; width: 100%; z-index: 1000;
-    padding: 1rem 2rem;
-    display: flex; justify-content: space-between; align-items: center;
-    backdrop-filter: blur(20px);
-    background: rgba(13, 15, 23, 0.9);
-    border-bottom: 1px solid rgba(0, 229, 255, 0.08);
-    transition: all 0.3s;
-  }
-  nav.scrolled { padding: 0.6rem 2rem; background: rgba(13, 15, 23, 0.98); }
+  nav { position: fixed; top: 0; width: 100%; z-index: 1000; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; backdrop-filter: blur(20px); background: rgba(13,15,23,0.8); border-bottom: 1px solid rgba(0,229,255,0.08); }
   .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-  .nav-logo img { height: 40px; width: auto; border-radius: 8px; }
+  .nav-logo img { height: 40px; border-radius: 8px; }
   .nav-logo span { font-size: 1.3rem; font-weight: 700; background: linear-gradient(135deg, var(--silver-bright), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 2px; }
   .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
-  .nav-links a { color: var(--gray); text-decoration: none; font-size: 0.85rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s; position: relative; }
-  .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: var(--cyan); transition: width 0.3s; }
+  .nav-links a { color: var(--gray); text-decoration: none; font-size: 0.85rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s; }
   .nav-links a:hover { color: var(--cyan); }
-  .nav-links a:hover::after { width: 100%; }
-  .nav-cta { padding: 8px 20px !important; background: transparent !important; border: 1px solid var(--cyan) !important; color: var(--cyan) !important; border-radius: 6px; font-size: 0.8rem !important; letter-spacing: 1.5px; transition: all 0.3s !important; }
-  .nav-cta:hover { background: var(--cyan-dim) !important; box-shadow: 0 0 20px var(--cyan-dim); }
-  .mobile-toggle { display: none; background: none; border: none; color: var(--silver); font-size: 1.5rem; cursor: pointer; }
-  @media (max-width: 768px) {
-    .mobile-toggle { display: block; }
-    .nav-links { display: none; position: fixed; top: 70px; left: 0; right: 0; background: rgba(13,15,23,0.98); flex-direction: column; padding: 2rem; gap: 1.5rem; border-bottom: 1px solid var(--gray-dim); }
-    .nav-links.open { display: flex; }
-  }
-
-  .page-hero {
-    padding: 160px 2rem 80px;
-    text-align: center;
-    position: relative;
-  }
-  .page-hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse at 50% 0%, rgba(0,229,255,0.06) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .section-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--cyan); margin-bottom: 1rem; font-family: 'JetBrains Mono', monospace; }
-  .page-title { font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 800; color: var(--silver-bright); margin-bottom: 1rem; letter-spacing: -2px; line-height: 1.05; }
-  .page-subtitle { font-size: 1.1rem; color: var(--gray); max-width: 600px; margin: 0 auto 3rem; line-height: 1.8; font-weight: 300; }
-
-  .ventures-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem 100px; }
-  .ventures-section-label {
-    font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; font-weight: 600;
-    letter-spacing: 3px; text-transform: uppercase;
-    display: flex; align-items: center; gap: 12px;
-    margin-bottom: 2rem; margin-top: 3rem;
-  }
-  .label-live { color: #34D399; }
-  .label-live .label-dot { width: 8px; height: 8px; border-radius: 50%; background: #34D399; animation: pulse-dot 2s ease-in-out infinite; }
-  .label-building { color: #F59E0B; }
-  .label-building .label-dot { width: 8px; height: 8px; border-radius: 50%; background: #F59E0B; }
-  @keyframes pulse-dot { 0%,100%{opacity:1;} 50%{opacity:0.4;} }
-  .label-line { flex: 1; height: 1px; max-width: 60px; }
-  .label-line-live { background: #34D399; }
-  .label-line-building { background: #F59E0B; }
-
-  .venture-full {
-    background: var(--surface);
-    border: 1px solid var(--gray-dim);
-    border-radius: 16px;
-    padding: 2.5rem;
-    margin-bottom: 1.5rem;
-    transition: border-color 0.3s, box-shadow 0.3s;
-  }
-  .venture-full:hover { border-color: rgba(0,229,255,0.3); box-shadow: 0 0 40px rgba(0,229,255,0.05); }
-  .venture-header { display: flex; align-items: flex-start; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
-  .venture-icon-lg { font-size: 2.5rem; width: 64px; height: 64px; display: flex; align-items: center; justify-content: center; background: var(--surface-2); border-radius: 12px; flex-shrink: 0; }
-  .venture-meta { flex: 1; }
-  .venture-meta h2 { font-size: 1.5rem; font-weight: 700; color: var(--silver-bright); margin-bottom: 0.4rem; }
-  .venture-meta .tagline { color: var(--gray); font-size: 0.95rem; margin-bottom: 0.8rem; }
-  .tag { display: inline-block; padding: 3px 12px; border-radius: 100px; font-size: 0.7rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
-  .tag-live { background: rgba(52,211,153,0.15); color: #34D399; border: 1px solid rgba(52,211,153,0.3); }
-  .tag-building { background: rgba(245,158,11,0.15); color: #F59E0B; border: 1px solid rgba(245,158,11,0.3); }
-  .tag-ai { background: var(--cyan-dim); color: var(--cyan); border: 1px solid rgba(0,229,255,0.3); margin-left: 6px; }
-  .venture-link { margin-left: auto; padding: 8px 20px; background: transparent; border: 1px solid var(--cyan); color: var(--cyan); border-radius: 6px; font-size: 0.8rem; text-decoration: none; font-weight: 600; letter-spacing: 1px; transition: all 0.3s; align-self: flex-start; white-space: nowrap; }
-  .venture-link:hover { background: var(--cyan-dim); box-shadow: 0 0 20px var(--cyan-dim); }
-  .venture-body { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-  @media (max-width: 768px) { .venture-body { grid-template-columns: 1fr; } .venture-header { gap: 1rem; } .venture-link { margin-left: 0; } }
-  .venture-description p { color: var(--silver); line-height: 1.8; margin-bottom: 1rem; font-size: 0.95rem; }
-  .venture-description p:last-child { margin-bottom: 0; }
-  .venture-details h4 { font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--cyan); margin-bottom: 1rem; font-family: 'JetBrains Mono', monospace; }
-  .detail-list { list-style: none; }
-  .detail-list li { display: flex; align-items: flex-start; gap: 10px; color: var(--gray); font-size: 0.9rem; padding: 6px 0; border-bottom: 1px solid var(--gray-dim); }
-  .detail-list li:last-child { border-bottom: none; }
-  .detail-list li::before { content: '▸'; color: var(--cyan); flex-shrink: 0; margin-top: 2px; }
-  .metrics-row { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--gray-dim); }
-  .mini-metric { text-align: center; }
-  .mini-metric .val { font-family: 'JetBrains Mono', monospace; font-size: 1.4rem; font-weight: 700; background: linear-gradient(135deg, var(--silver-bright), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-  .mini-metric .lbl { font-size: 0.7rem; color: var(--gray); text-transform: uppercase; letter-spacing: 1px; }
-
-  .cta-strip {
-    background: linear-gradient(135deg, rgba(0,229,255,0.08), rgba(123,111,230,0.08));
-    border: 1px solid rgba(0,229,255,0.2);
-    border-radius: 16px;
-    padding: 3rem;
-    text-align: center;
-    margin: 4rem 0;
-  }
-  .cta-strip h2 { font-size: 2rem; font-weight: 700; color: var(--silver-bright); margin-bottom: 1rem; }
-  .cta-strip p { color: var(--gray); max-width: 500px; margin: 0 auto 2rem; line-height: 1.8; }
-  .btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; background: linear-gradient(135deg, var(--cyan), #00B8D4); color: var(--deep); font-weight: 600; font-size: 0.9rem; border: none; border-radius: 8px; text-decoration: none; transition: all 0.3s; box-shadow: 0 4px 20px rgba(0,229,255,0.3); }
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,229,255,0.4); }
-
-  footer { padding: 3rem 2rem; border-top: 1px solid var(--gray-dim); text-align: center; }
-  .footer-logo { font-size: 1.2rem; font-weight: 700; letter-spacing: 4px; color: var(--silver-bright); margin-bottom: 0.5rem; }
-  .footer-tagline { font-size: 0.8rem; color: var(--gray); letter-spacing: 2px; margin-bottom: 1.5rem; }
-  .footer-links { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem; }
-  .footer-links a { color: var(--gray); text-decoration: none; font-size: 0.85rem; transition: color 0.3s; }
+  .nav-cta { padding: 8px 20px; background: transparent; border: 1px solid var(--cyan); color: var(--cyan) !important; border-radius: 6px; font-size: 0.8rem !important; letter-spacing: 1.5px; }
+  .hero { padding: 140px 2rem 60px; text-align: center; }
+  .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; color: var(--silver-bright); margin-bottom: 1rem; }
+  .hero p { font-size: 1.1rem; color: var(--gray); max-width: 600px; margin: 0 auto; }
+  .section { padding: 60px 2rem; max-width: 800px; margin: 0 auto; }
+  .section h2 { font-size: 1.5rem; color: var(--silver-bright); margin-bottom: 1rem; font-weight: 600; }
+  .section p { color: var(--gray); line-height: 1.8; margin-bottom: 1rem; }
+  footer { text-align: center; padding: 60px 2rem; border-top: 1px solid var(--gray-dim); }
+  .footer-logo { font-size: 1.5rem; font-weight: 700; background: linear-gradient(135deg, var(--silver-bright), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 2px; margin-bottom: 1rem; }
+  .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; }
+  .footer-links a { color: var(--gray); text-decoration: none; font-size: 0.8rem; }
   .footer-links a:hover { color: var(--cyan); }
-  .footer-legal { font-size: 0.75rem; color: var(--gray-dim); }
+  .footer-legal { font-size: 0.7rem; color: var(--gray-dim); }
 </style>
 </head>
 <body>
-<!-- Navigation -->
-<nav id="navbar">
+<nav>
   <a href="/" class="nav-logo">
-    <img src="/aio-logo.jpg" alt="AIO Inc.">
+    <img src="aio-logo.jpg" alt="AIO Inc.">
     <span>AIO INC.</span>
   </a>
-  <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
   <ul class="nav-links">
-    <li><a href="/ventures.html">Ventures</a></li>
+    <li><a href="/about.html">About</a></li>
     <li><a href="/#approach">Approach</a></li>
-    <li><a href="/agents.html">Agents</a></li>
     <li><a href="/blog/">Blog</a></li>
     <li><a href="/build.html" class="nav-cta">Build With AIO</a></li>
   </ul>
 </nav>
 
-<!-- Hero -->
-<div class="page-hero">
-  <div class="section-label">// PORTFOLIO</div>
-  <h1 class="page-title">What We're Building</h1>
-  <p class="page-subtitle">Every AIO venture runs on autonomous AI agents at its core. Not as a feature added later — as the foundation from day one.</p>
-</div>
+<section class="hero">
+  <h1>Ventures</h1>
+  <p>AIO Inc. builds and operates AI-powered companies across multiple industries. Each venture is designed to run autonomously and scale without limits.</p>
+</section>
 
-<div class="ventures-container">
+<section class="section">
+  <h2>What We Do</h2>
+  <p>We identify real problems, build AI-powered solutions, and deploy them as autonomous business operations. Our ventures span marketing, financial services, e-commerce, healthcare technology, legal services, and civic technology.</p>
+  <p>Each venture is built to operate with minimal human overhead — AI handles the repetitive work while humans focus on strategy, relationships, and decisions that matter.</p>
+</section>
 
-  <!-- LIVE Section -->
-  <div class="ventures-section-label label-live">
-    <span class="label-line label-line-live"></span>
-    LIVE
-    <span class="label-dot"></span>
-  </div>
-
-  <!-- FireHorse Branding -->
-  <div class="venture-full">
-    <div class="venture-header">
-      <div class="venture-icon-lg">🔥</div>
-      <div class="venture-meta">
-        <h2>FireHorse Branding</h2>
-        <p class="tagline">AI-powered full-service marketing agency for realtors and local businesses</p>
-        <span class="tag tag-live">Live</span>
-        <span class="tag tag-ai">AI Agent: Phoenix</span>
-      </div>
-      <a href="https://firehorsebranding.com" target="_blank" rel="noopener" class="venture-link">Visit Site →</a>
-    </div>
-    <div class="venture-body">
-      <div class="venture-description">
-        <p>FireHorse is the proof of concept that became a real business. We built an entire AI-managed marketing agency from scratch in 30 days — social media management, content creation, SEO, web development, analytics — all operated by Phoenix, our dedicated marketing AI agent.</p>
-        <p>Each client gets a tailored content calendar, platform-specific creative assets, and a marketing strategy that evolves based on performance data. Phoenix creates, schedules, and tracks 200+ pieces of content every month across all clients without manual intervention.</p>
-        <p>Current clients span real estate (luxury residential and farm/ranch), foundation repair, exterior cleaning, and property tax consulting — all in the DFW metro. The playbook we built for these clients is the same one we sell to others looking to replicate it.</p>
-      </div>
-      <div class="venture-details">
-        <h4>What Phoenix Does</h4>
-        <ul class="detail-list">
-          <li>Creates and schedules 40-50 posts/month per client across FB, IG, YouTube, LinkedIn</li>
-          <li>Produces platform-native content — Reels, carousels, static posts, Shorts</li>
-          <li>Manages and updates client websites for SEO and conversion</li>
-          <li>Monitors analytics and pivots strategy based on engagement data</li>
-          <li>Handles Google Business Profile updates, review responses, and local SEO</li>
-          <li>Generates weekly performance reports for client review</li>
-        </ul>
-        <div class="metrics-row">
-          <div class="mini-metric"><div class="val">5+</div><div class="lbl">Active Clients</div></div>
-          <div class="mini-metric"><div class="val">200+</div><div class="lbl">Posts/Month</div></div>
-          <div class="mini-metric"><div class="val">24/7</div><div class="lbl">Operations</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- IFR Digital -->
-  <div class="venture-full">
-    <div class="venture-header">
-      <div class="venture-icon-lg">🏠</div>
-      <div class="venture-meta">
-        <h2>IFR Digital</h2>
-        <p class="tagline">AI-managed digital presence for Integrity Foundation Repair — dominating DFW search</p>
-        <span class="tag tag-live">Live</span>
-        <span class="tag tag-ai">AI Agent: Alfred + Phoenix</span>
-      </div>
-      <a href="https://ifrdfw.com" target="_blank" rel="noopener" class="venture-link">Visit Site →</a>
-    </div>
-    <div class="venture-body">
-      <div class="venture-description">
-        <p>IFR Digital is what happens when you give a foundation repair company a full AI marketing and web operations team. We built ifrdfw.com from the ground up — 70+ city-specific landing pages, AI-generated SEO content, and a lead capture system that converts visitors into calls.</p>
-        <p>The site ranks in local search across the entire DFW metroplex because we built a page for every city Integrity serves. Each page has unique content, local landmarks, and schema markup. Alfred manages the technical infrastructure; Phoenix drives content and social.</p>
-        <p>Foundation repair is a high-ticket, trust-dependent business. Homeowners spend $10K-$100K+ on repairs. Our job is to make sure when someone in Keller or Mansfield Googles "foundation repair near me," Integrity shows up — and then convert that click into a lead.</p>
-      </div>
-      <div class="venture-details">
-        <h4>Key Features</h4>
-        <ul class="detail-list">
-          <li>70+ city-specific SEO landing pages with unique content</li>
-          <li>Google Business Profile management and review response</li>
-          <li>AI-driven content calendar: before/after photos, educational posts, storm-chasing content</li>
-          <li>Lead capture forms integrated with CRM</li>
-          <li>Schema markup (LocalBusiness, FAQ, Review) on all pages</li>
-          <li>4.7-star rating reputation management across 428+ reviews</li>
-        </ul>
-        <div class="metrics-row">
-          <div class="mini-metric"><div class="val">70+</div><div class="lbl">City Pages</div></div>
-          <div class="mini-metric"><div class="val">4.7★</div><div class="lbl">Google Rating</div></div>
-          <div class="mini-metric"><div class="val">428+</div><div class="lbl">Reviews</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- GPS Property Tax -->
-  <div class="venture-full">
-    <div class="venture-header">
-      <div class="venture-icon-lg">💰</div>
-      <div class="venture-meta">
-        <h2>GPS Property Tax</h2>
-        <p class="tagline">Professional property tax protest and consulting — powered by AI-enhanced appraisal analysis</p>
-        <span class="tag tag-live">Live</span>
-        <span class="tag tag-ai">AI-Enhanced</span>
-      </div>
-      <a href="https://gpspropertytaxconsulting.com" target="_blank" rel="noopener" class="venture-link">Visit Site →</a>
-    </div>
-    <div class="venture-body">
-      <div class="venture-description">
-        <p>Texas property taxes are a disaster for homeowners. Appraisal districts routinely over-value properties, and most homeowners either don't protest or don't know how. GPS Property Tax fights those unfair appraisals — and they win.</p>
-        <p>Our AI systems pull comparable sales data, analyze appraisal district methodology, and build evidence packages that make the case for lower valuations. Kim Jones and her team bring the human expertise; we provide the data horsepower to back it up.</p>
-        <p>The protest season is April-May every year in Texas. During that window, GPS handles dozens of protests simultaneously. AI automation makes that scale possible without proportional headcount growth.</p>
-      </div>
-      <div class="venture-details">
-        <h4>What the AI Does</h4>
-        <ul class="detail-list">
-          <li>Pulls and analyzes comparable sales from MCAD, DCAD, TCAD, and other CADs</li>
-          <li>Identifies methodological errors in appraisal district valuations</li>
-          <li>Generates structured evidence packages for ARB hearings</li>
-          <li>Tracks protest deadlines and filing requirements by county</li>
-          <li>Content marketing: educates homeowners on protest rights and process</li>
-          <li>Lead generation targeting DFW homeowners during protest season</li>
-        </ul>
-        <div class="metrics-row">
-          <div class="mini-metric"><div class="val">$000s</div><div class="lbl">Saved/Client</div></div>
-          <div class="mini-metric"><div class="val">DFW</div><div class="lbl">Coverage Area</div></div>
-          <div class="mini-metric"><div class="val">Annual</div><div class="lbl">Protest Season</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- KIS Treasury -->
-  <div class="venture-full">
-    <div class="venture-header">
-      <div class="venture-icon-lg">🔑</div>
-      <div class="venture-meta">
-        <h2>KIS Treasury</h2>
-        <p class="tagline">Financial management software built for AA, NA, and 12-step groups</p>
-        <span class="tag tag-live">Live</span>
-        <span class="tag tag-ai">AI-Powered</span>
-      </div>
-    </div>
-    <div class="venture-body">
-      <div class="venture-description">
-        <p>Keep It Simple. The name says it all. KIS Treasury is the only financial management platform built specifically for AA and NA groups, intergroups, and area service committees.</p>
-        <p>Group treasurers have historically been stuck between two bad options: shoebox accounting or generic software that doesn't understand the 7th Tradition. KIS Treasury was built by people who have sat in those treasurer chairs — it understands prudent reserves, rent, and how recovery groups actually handle money.</p>
-        <p>The platform tracks contributions, manages expenses, generates treasurer reports, and provides the financial transparency that recovery groups owe their members. No spreadsheets. No confusion about what goes where. Just simple, honest bookkeeping for the fellowship.</p>
-      </div>
-      <div class="venture-details">
-        <h4>Key Features</h4>
-        <ul class="detail-list">
-          <li>7th Tradition tracking with meeting-by-meeting contribution logs</li>
-          <li>Prudent reserve calculator based on group's expenses</li>
-          <li>Automated monthly and annual treasurer reports</li>
-          <li>Multi-group support for intergroups and district committees</li>
-          <li>Donation link generation for online contributions</li>
-          <li>Full audit trail — every transaction logged and timestamped</li>
-        </ul>
-        <div class="metrics-row">
-          <div class="mini-metric"><div class="val">v2.0</div><div class="lbl">Current Version</div></div>
-          <div class="mini-metric"><div class="val">AA/NA</div><div class="lbl">Groups Served</div></div>
-          <div class="mini-metric"><div class="val">0</div><div class="lbl">Ads. Ever.</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- S&S Ammo -->
-  <div class="venture-full">
-    <div class="venture-header">
-      <div class="venture-icon-lg">🎯</div>
-      <div class="venture-meta">
-        <h2>S&amp;S Ammo</h2>
-        <p class="tagline">Full e-commerce platform for ammunition retail — built for the 2A community</p>
-        <span class="tag tag-live">Live</span>
-        <span class="tag tag-ai">AI Agent: Amadeus</span>
-      </div>
-    </div>
-    <div class="venture-body">
-      <div class="venture-description">
-        <p>E-commerce for ammunition isn't like selling t-shirts. You have regulatory compliance, inventory complexity (caliber, grain, count, brand), and a customer base that knows exactly what they want and will leave immediately if you make it hard to find.</p>
-        <p>S&amp;S Ammo is a purpose-built e-commerce platform managed by Amadeus, our e-commerce AI agent. Amadeus handles inventory tracking, product listings, pricing updates, and order management. When stock runs low, Amadeus flags it. When a product page needs updating, Amadeus handles it.</p>
-        <p>The storefront is fast, mobile-optimized, and frictionless. The checkout process is clean. And because Amadeus operates it 24/7, the store is never "closed" in any meaningful sense.</p>
-      </div>
-      <div class="venture-details">
-        <h4>Platform Capabilities</h4>
-        <ul class="detail-list">
-          <li>Real-time inventory management with barcode scanning</li>
-          <li>Automated product listings with caliber/grain/brand taxonomy</li>
-          <li>Dynamic pricing and stock level alerts</li>
-          <li>Mobile-first checkout optimized for conversion</li>
-          <li>Order management and fulfillment tracking</li>
-          <li>2A-compliant age verification and compliance checks</li>
-        </ul>
-        <div class="metrics-row">
-          <div class="mini-metric"><div class="val">24/7</div><div class="lbl">Store Operations</div></div>
-          <div class="mini-metric"><div class="val">2A</div><div class="lbl">Community</div></div>
-          <div class="mini-metric"><div class="val">Amadeus</div><div class="lbl">AI Operator</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Thor Taxes -->
-  <div class="venture-full">
-    <div class="venture-header">
-      <div class="venture-icon-lg">⚡</div>
-      <div class="venture-meta">
-        <h2>Thor Taxes</h2>
-        <p class="tagline">AI-powered tax strategy and filing assistance — bringing the hammer down on your tax bill</p>
-        <span class="tag tag-live">Live</span>
-        <span class="tag tag-ai">AI-Enhanced</span>
-      </div>
-    </div>
-    <div class="venture-body">
-      <div class="venture-description">
-        <p>Thor Taxes was built on a simple premise: most small business owners are overpaying their taxes because they don't have a CPA who proactively hunts for deductions. AI can change that.</p>
-        <p>Thor's AI systems analyze financial data to identify deduction opportunities, flag potential issues before they become audit risks, and guide users through tax strategies that are typically reserved for clients paying $10K+/year in accounting fees. The strategy layer is AI-driven; the filing is handled by licensed professionals.</p>
-        <p>The integration of AI and human expertise is deliberate. AI can process thousands of transactions and identify patterns a human might miss. Licensed professionals ensure accuracy and sign off on returns. Together, they deliver a product that neither could alone.</p>
-      </div>
-      <div class="venture-details">
-        <h4>Key Capabilities</h4>
-        <ul class="detail-list">
-          <li>AI-driven deduction analysis across business expenses and investments</li>
-          <li>Quarterly estimated tax calculations to avoid underpayment penalties</li>
-          <li>Business entity structure optimization recommendations</li>
-          <li>Audit risk scoring on returns before filing</li>
-          <li>Year-round tax strategy — not just April scrambling</li>
-          <li>Human CPA review and signature on all filed returns</li>
-        </ul>
-        <div class="metrics-row">
-          <div class="mini-metric"><div class="val">Year-Round</div><div class="lbl">Strategy</div></div>
-          <div class="mini-metric"><div class="val">AI+CPA</div><div class="lbl">Combined</div></div>
-          <div class="mini-metric"><div class="val">SMBs</div><div class="lbl">Focus</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Hermes Medical -->
-  <div class="venture-full">
-    <div class="venture-header">
-      <div class="venture-icon-lg">🏥</div>
-      <div class="venture-meta">
-        <h2>Hermes Medical</h2>
-        <p class="tagline">Drug Interaction Shield™ and AI medical scribe tools for healthcare providers</p>
-        <span class="tag tag-live">Live</span>
-        <span class="tag tag-ai">AI-Powered</span>
-      </div>
-    </div>
-    <div class="venture-body">
-      <div class="venture-description">
-        <p>Hermes Medical addresses two of the most significant friction points in modern healthcare: drug interaction checking and clinical documentation. Both problems are well-understood. Both are inadequately solved by existing tools.</p>
-        <p>Drug Interaction Shield™ is a real-time interaction checking tool that goes beyond the basic checks in most EHR systems. It identifies multi-drug interaction patterns, flags contraindications based on patient comorbidities, and provides clinicians with actionable guidance — not just warnings.</p>
-        <p>The AI medical scribe component captures physician-patient conversations and transforms them into structured clinical notes, dramatically reducing the documentation burden that's driving burnout across the medical profession. Physicians spend an estimated 2 hours per day on documentation — time that should be spent with patients.</p>
-      </div>
-      <div class="venture-details">
-        <h4>Products</h4>
-        <ul class="detail-list">
-          <li>Drug Interaction Shield™ — multi-drug interaction analysis</li>
-          <li>AI Medical Scribe — conversation-to-SOAP-note transcription</li>
-          <li>EHR integration via standard APIs (HL7 FHIR)</li>
-          <li>HIPAA-compliant data handling throughout</li>
-          <li>Physician review and approval workflow</li>
-          <li>Specialty-specific templates for primary care, psychiatry, and urgent care</li>
-        </ul>
-        <div class="metrics-row">
-          <div class="mini-metric"><div class="val">2hrs</div><div class="lbl">Saved/Day</div></div>
-          <div class="mini-metric"><div class="val">HIPAA</div><div class="lbl">Compliant</div></div>
-          <div class="mini-metric"><div class="val">FHIR</div><div class="lbl">Compatible</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Baldur Parole -->
-  <div class="venture-full">
-    <div class="venture-header">
-      <div class="venture-icon-lg">⚖️</div>
-      <div class="venture-meta">
-        <h2>Baldur Parole</h2>
-        <p class="tagline">AI-assisted parole packet preparation and legal document support</p>
-        <span class="tag tag-live">Live</span>
-        <span class="tag tag-ai">AI-Assisted</span>
-      </div>
-    </div>
-    <div class="venture-body">
-      <div class="venture-description">
-        <p>Parole boards make life-altering decisions in minutes. The quality of a parole packet — the documentation submitted on behalf of an inmate — can be the difference between release and continued incarceration. Most families navigating this process have no idea what a strong packet looks like.</p>
-        <p>Baldur Parole was built to fix that. Our AI systems help families and advocates compile compelling parole packets: employment support letters, housing plans, reentry programs, and personal statements that speak to the board's actual criteria.</p>
-        <p>This isn't legal advice and we're clear about that. It's a tool that helps people who can't afford attorneys navigate a system that was never designed to be navigated without one. It levels a playing field that's been tilted for decades.</p>
-      </div>
-      <div class="venture-details">
-        <h4>What Baldur Builds</h4>
-        <ul class="detail-list">
-          <li>Structured parole packet templates tailored to state-specific boards</li>
-          <li>Employment support letter frameworks for employers to complete</li>
-          <li>Housing plan documentation and community support letters</li>
-          <li>Reentry program identification by release location</li>
-          <li>Personal statement guidance — what boards actually want to hear</li>
-          <li>Timeline tracking for hearing dates and submission deadlines</li>
-        </ul>
-        <div class="metrics-row">
-          <div class="mini-metric"><div class="val">Families</div><div class="lbl">Served</div></div>
-          <div class="mini-metric"><div class="val">State</div><div class="lbl">Specific</div></div>
-          <div class="mini-metric"><div class="val">Impact</div><div class="lbl">Driven</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- CTA -->
-  <div class="cta-strip">
-    <h2>Want to Be the Next Venture?</h2>
-    <p>We build AI-powered companies. If you have an idea that deserves a dedicated AI team, let's talk.</p>
-    <a href="/build.html" class="btn-primary">Build With AIO →</a>
-  </div>
-
-</div>
-
-<!-- Footer -->
 <footer>
   <div class="footer-logo">AIO INC.</div>
-  <div class="footer-tagline">Artificial Intelligence Operations</div>
   <div class="footer-links">
-    <a href="/ventures.html">Ventures</a>
-    <a href="/agents.html">Agents</a>
+    <a href="/about.html">About</a>
     <a href="/blog/">Blog</a>
     <a href="/build.html">Build With AIO</a>
     <a href="mailto:info@aioglobal.com">Contact</a>
   </div>
-  <div class="footer-legal">© 2026 AIO Inc. All rights reserved. Built by agents, for the future.</div>
+  <div class="footer-legal">© 2026 AIO Inc. All rights reserved.</div>
 </footer>
-
-<script>
-  window.addEventListener('scroll', () => {
-    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
-  });
-</script>
 </body>
 </html>
